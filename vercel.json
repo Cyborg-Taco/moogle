@@ -1,0 +1,53 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "migration": {
+      "root": "migration",
+      "runtime": "python"
+    },
+    "backlinks-processor": {
+      "root": "services/backlinks-processor",
+      "runtime": "python"
+    },
+    "client": {
+      "root": "services/client",
+      "framework": "vite"
+    },
+    "image-indexer": {
+      "root": "services/image-indexer",
+      "runtime": "python"
+    },
+    "indexer": {
+      "root": "services/indexer",
+      "runtime": "python"
+    },
+    "monitoring": {
+      "root": "services/monitoring",
+      "runtime": "rust"
+    },
+    "page-rank": {
+      "root": "services/page-rank",
+      "runtime": "container"
+    },
+    "query-engine": {
+      "root": "services/query-engine",
+      "framework": "vite"
+    },
+    "spider": {
+      "root": "services/spider",
+      "runtime": "container"
+    },
+    "tfidf": {
+      "root": "services/tfidf",
+      "runtime": "python"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "client"
+      }
+    }
+  ]
+}
