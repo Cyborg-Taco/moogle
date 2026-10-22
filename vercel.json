@@ -1,10 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
-    "migration": {
-      "root": "migration",
-      "runtime": "python"
-    },
     "backlinks-processor": {
       "root": "services/backlinks-processor",
       "runtime": "python"
